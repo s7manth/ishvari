@@ -9,7 +9,7 @@ const Register = () => {
     const history = useHistory();
 
     const initialState = {
-        fullname: '',
+        fullName: '',
         username: '',
         email: '',
         password: '',
@@ -17,7 +17,7 @@ const Register = () => {
         gender: 'male'
     };
     const [userData, setUserData] = useState(initialState);
-    const { fullname, username, email, password, cf_password } = userData;
+    const { fullName, username, email, password, cf_password } = userData;
 
     const [typePass, setTypePass] = useState(false);
     const [typeCfPass, setTypeCfPass] = useState(false);
@@ -39,24 +39,24 @@ const Register = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">V-Network</h3>
+                <h3 className="text-uppercase text-center mb-4">Ishvari</h3>
 
                 <div className="form-group">
-                    <label htmlFor="fullname">Full Name</label>
+                    <label htmlFor="fullName">Full Name</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="fullname"
-                        name="fullname"
+                        id="fullName"
+                        name="fullName"
                         onChange={handleChangeInput}
-                        value={fullname}
+                        value={fullName}
                         style={{
-                            background: `${alert.fullname ? '#fd2d6a14' : ''}`
+                            background: `${alert.fullName ? '#fd2d6a14' : ''}`
                         }}
                     />
 
                     <small className="form-text text-danger">
-                        {alert.fullname ? alert.fullname : ''}
+                        {alert.fullName ? alert.fullName : ''}
                     </small>
                 </div>
 

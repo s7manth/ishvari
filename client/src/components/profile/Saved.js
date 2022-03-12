@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PostThumb from '../PostThumb';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../images/loading-icon.svg';
 import LoadMoreBtn from '../LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';

@@ -13,7 +13,7 @@ import {
     loadMoreMessages,
     deleteConversation
 } from '../../redux/actions/messageAction';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../images/loading-icon.svg';
 
 const RightSide = () => {
     const { auth, message, theme, socket, peer } = useSelector(

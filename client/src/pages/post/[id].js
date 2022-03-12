@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPost } from '../../redux/actions/postAction';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../images/loading-icon.svg';
 import PostCard from '../../components/PostCard';
 
 const Post = () => {

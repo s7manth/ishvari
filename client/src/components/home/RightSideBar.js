@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import UserCard from '../UserCard';
 import FollowBtn from '../FollowBtn';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../images/loading-icon.svg';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 
 const RightSideBar = () => {
@@ -40,22 +40,6 @@ const RightSideBar = () => {
                     ))}
                 </div>
             )}
-
-            <div style={{ opacity: 0.5 }} className="my-2">
-                <a
-                    href="https://www.youtube.com/c/DevATHTML"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ wordBreak: 'break-all' }}
-                >
-                    https://www.youtube.com/c/DevATHTML
-                </a>
-                <small className="d-block">
-                    Welcome to our channel "DevAT-VietNam"
-                </small>
-
-                <small>&copy; 2021 V-NETWORK FROM DEV A.T VIET NAM</small>
-            </div>
         </div>
     );
 };

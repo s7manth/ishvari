@@ -54,7 +54,7 @@ const postCtrl = {
 
             const posts = await features.query
                 .sort('-createdAt')
-                .populate('user likes', 'avatar username fullname followers')
+                .populate('user likes', 'avatar username fullName followers')
                 .populate({
                     path: 'comments',
                     populate: {
@@ -83,7 +83,7 @@ const postCtrl = {
                     images
                 }
             )
-                .populate('user likes', 'avatar username fullname')
+                .populate('user likes', 'avatar username fullName')
                 .populate({
                     path: 'comments',
                     populate: {
@@ -170,7 +170,7 @@ const postCtrl = {
     getPost: async (req, res) => {
         try {
             const post = await Posts.findById(req.params.id)
-                .populate('user likes', 'avatar username fullname followers')
+                .populate('user likes', 'avatar username fullName followers')
                 .populate({
                     path: 'comments',
                     populate: {

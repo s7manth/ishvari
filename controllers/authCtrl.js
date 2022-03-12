@@ -5,7 +5,13 @@ const jwt = require('jsonwebtoken');
 const authCtrl = {
     register: async (req, res) => {
         try {
-            const { fullname, username, email, password, gender } = req.body;
+            const {
+                fullName: fullName,
+                username,
+                email,
+                password,
+                gender
+            } = req.body;
             let newUserName = username.toLowerCase().replace(/ /g, '');
 
             const user_name = await Users.findOne({ username: newUserName });
@@ -28,7 +34,7 @@ const authCtrl = {
             const passwordHash = await bcrypt.hash(password, 12);
 
             const newUser = new Users({
-                fullname,
+                fullName: fullName,
                 username: newUserName,
                 email,
                 password: passwordHash,
@@ -64,7 +70,7 @@ const authCtrl = {
 
             const user = await Users.findOne({ email }).populate(
                 'followers following',
-                'avatar username fullname followers following'
+                'avatar username fullName followers following'
             );
 
             if (!user)
@@ -124,7 +130,7 @@ const authCtrl = {
                         .select('-password')
                         .populate(
                             'followers following',
-                            'avatar username fullname followers following'
+                            'avatar username fullName followers following'
                         );
 
                     if (!user)
