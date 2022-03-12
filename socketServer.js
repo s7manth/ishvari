@@ -1,9 +1,7 @@
 let users = [];
 
 const EditData = (data, id, call) => {
-    return data.map((item) =>
-        item.id === id ? { ...item, call } : item
-    );
+    return data.map((item) => (item.id === id ? { ...item, call } : item));
 };
 
 const SocketServer = (socket) => {

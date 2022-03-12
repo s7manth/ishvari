@@ -27,7 +27,8 @@ const userSchema = new mongoose.Schema(
         },
         avatar: {
             type: String,
-            default: 'https://res.cloudinary.com/notfound/image/upload/v1647061714/ishvari/ishvari-avatar_lbeyrg.png'
+            default:
+                'https://res.cloudinary.com/notfound/image/upload/v1647061714/ishvari/ishvari-avatar_lbeyrg.png'
         },
         role: { type: String, default: 'user' },
         gender: { type: String, default: 'male' },

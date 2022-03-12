@@ -5,7 +5,13 @@ const jwt = require('jsonwebtoken');
 const authCtrl = {
     register: async (req, res) => {
         try {
-            const { fullName: fullName, username, email, password, gender } = req.body;
+            const {
+                fullName: fullName,
+                username,
+                email,
+                password,
+                gender
+            } = req.body;
             let newUserName = username.toLowerCase().replace(/ /g, '');
 
             const user_name = await Users.findOne({ username: newUserName });
