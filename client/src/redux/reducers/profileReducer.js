@@ -1,15 +1,15 @@
-import { PROFILE_TYPES } from '../actions/profileAction'
-import { EditData } from '../actions/globalTypes'
+import { PROFILE_TYPES } from '../actions/profileAction';
+import { EditData } from '../actions/globalTypes';
 
 const initialState = {
     loading: false,
     ids: [],
     users: [],
     posts: []
-}
+};
 
 const profileReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case PROFILE_TYPES.LOADING:
             return {
                 ...state,
@@ -48,6 +48,6 @@ const profileReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
-export default profileReducer
+export default profileReducer;
