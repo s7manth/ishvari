@@ -1,15 +1,15 @@
-import { POST_TYPES } from '../actions/postAction'
-import { EditData, DeleteData } from '../actions/globalTypes'
+import { POST_TYPES } from '../actions/postAction';
+import { EditData, DeleteData } from '../actions/globalTypes';
 
 const initialState = {
     loading: false,
     posts: [],
     result: 0,
     page: 2
-}
+};
 
 const postReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case POST_TYPES.CREATE_POST:
             return {
                 ...state,
@@ -40,6 +40,6 @@ const postReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
-export default postReducer
+export default postReducer;

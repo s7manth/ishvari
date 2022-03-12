@@ -1,14 +1,14 @@
-import { NOTIFY_TYPES } from '../actions/notifyAction'
-import { EditData } from '../actions/globalTypes'
+import { NOTIFY_TYPES } from '../actions/notifyAction';
+import { EditData } from '../actions/globalTypes';
 
 const initialState = {
     loading: false,
     data: [],
     sound: false
-}
+};
 
 const notifyReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case NOTIFY_TYPES.GET_NOTIFIES:
             return {
                 ...state,
@@ -22,9 +22,11 @@ const notifyReducer = (state = initialState, action) => {
         case NOTIFY_TYPES.REMOVE_NOTIFY:
             return {
                 ...state,
-                data: state.data.filter(item => (
-                    item.id !== action.payload.id || item.url !== action.payload.url
-                ))
+                data: state.data.filter(
+                    (item) =>
+                        item.id !== action.payload.id ||
+                        item.url !== action.payload.url
+                )
             };
         case NOTIFY_TYPES.UPDATE_NOTIFY:
             return {
@@ -44,7 +46,6 @@ const notifyReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
-
-export default notifyReducer
+export default notifyReducer;

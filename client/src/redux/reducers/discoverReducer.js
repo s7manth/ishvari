@@ -1,4 +1,4 @@
-import { DISCOVER_TYPES } from '../actions/discoverAction'
+import { DISCOVER_TYPES } from '../actions/discoverAction';
 
 const initialState = {
     loading: false,
@@ -6,10 +6,10 @@ const initialState = {
     result: 9,
     page: 2,
     firstLoad: false
-}
+};
 
 const discoverReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case DISCOVER_TYPES.LOADING:
             return {
                 ...state,
@@ -32,6 +32,6 @@ const discoverReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
-export default discoverReducer
+export default discoverReducer;
