@@ -4,7 +4,7 @@ import {
     getDiscoverPosts,
     DISCOVER_TYPES
 } from '../redux/actions/discoverAction';
-import LoadIcon from '../images/loading.gif';
+import LoadIcon from '../images/loading-icon.svg';
 import PostThumb from '../components/PostThumb';
 import LoadMoreBtn from '../components/LoadMoreBtn';
 import { getDataAPI } from '../utils/fetchData';

@@ -67,7 +67,7 @@ const messageCtrl = {
 
             const conversations = await features.query
                 .sort('-updatedAt')
-                .populate('recipients', 'avatar username fullname');
+                .populate('recipients', 'avatar username fullName');
 
             res.json({
                 conversations,
@@ -112,13 +112,13 @@ const messageCtrl = {
     },
     deleteConversation: async (req, res) => {
         try {
-            const newConver = await Conversations.findOneAndDelete({
+            const newConversation = await Conversations.findOneAndDelete({
                 $or: [
                     { recipients: [req.user._id, req.params.id] },
                     { recipients: [req.params.id, req.user._id] }
                 ]
             });
-            await Messages.deleteMany({ conversation: newConver._id });
+            await Messages.deleteMany({ conversation: newConversation._id });
 
             res.json({ msg: 'Delete Success!' });
         } catch (err) {

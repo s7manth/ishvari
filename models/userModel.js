@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
     {
-        fullname: {
+        fullName: {
             type: String,
             required: true,
             trim: true,
@@ -27,8 +27,7 @@ const userSchema = new mongoose.Schema(
         },
         avatar: {
             type: String,
-            default:
-                'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png'
+            default: 'https://res.cloudinary.com/notfound/image/upload/v1647061714/ishvari/ishvari-avatar_lbeyrg.png'
         },
         role: { type: String, default: 'user' },
         gender: { type: String, default: 'male' },

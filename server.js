@@ -1,16 +1,25 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const SocketServer = require('./socketServer');
 const { ExpressPeerServer } = require('peer');
 const path = require('path');
+const cloudinary = require('cloudinary');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+    secure: true
+});
 
 // Socket
 const http = require('http').createServer(app);
@@ -42,7 +51,7 @@ mongoose.connect(
     },
     (err) => {
         if (err) throw err;
-        console.log('Connected to mongodb');
+        console.log('Connected to MongoDB');
     }
 );
 

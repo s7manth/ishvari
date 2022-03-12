@@ -5,7 +5,7 @@ import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
 
 import { useSelector, useDispatch } from 'react-redux';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../images/loading-icon.svg';
 import { getProfileUsers } from '../../redux/actions/profileAction';
 import { useParams } from 'react-router-dom';
 
