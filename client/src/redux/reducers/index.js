@@ -20,8 +20,8 @@ import {
     productDetailsReducer,
     productSaveReducer,
     productDeleteReducer,
-    productReviewSaveReducer,
-  } from './reducers/productReducers';
+    productReviewSaveReducer
+} from './productReducer';
 
 export default combineReducers({
     auth,
