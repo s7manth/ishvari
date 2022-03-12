@@ -15,6 +15,13 @@ import message from './messageReducer';
 import online from './onlineReducer';
 import call from './callReducer';
 import peer from './peerReducer';
+import {
+    productListReducer,
+    productDetailsReducer,
+    productSaveReducer,
+    productDeleteReducer,
+    productReviewSaveReducer,
+  } from './reducers/productReducers';
 
 export default combineReducers({
     auth,
@@ -32,5 +39,10 @@ export default combineReducers({
     message,
     online,
     call,
-    peer
+    peer,
+    productDeleteReducer,
+    productDetailsReducer,
+    productListReducer,
+    productReviewSaveReducer,
+    productSaveReducer
 });
