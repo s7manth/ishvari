@@ -1,5 +1,5 @@
 const valid = ({
-    fullname: fullName,
+    fullName,
     username,
     email,
     password,
@@ -8,9 +8,9 @@ const valid = ({
     const err = {};
 
     if (!fullName) {
-        err.fullname = 'Please add your full name.';
+        err.fullName = 'Please add your full name.';
     } else if (fullName.length > 25) {
-        err.fullname = 'Full name is up to 25 characters long.';
+        err.fullName = 'Full name is up to 25 characters long.';
     }
 
     if (!username) {
