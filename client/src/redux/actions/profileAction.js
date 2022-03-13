@@ -1,7 +1,16 @@
+//import cloudinary from 'cloudinary';
 import { GLOBALTYPES, DeleteData } from './globalTypes';
 import { getDataAPI, patchDataAPI } from '../../utils/fetchData';
 import { imageUpload } from '../../utils/imageUpload';
 import { createNotify, removeNotify } from '../actions/notifyAction';
+const cloudinary = require('cloudinary');
+
+//cloudinary.config({
+//cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+//api_key: process.env.CLOUDINARY_API_KEY,
+//api_secret: process.env.CLOUDINARY_API_SECRET,
+//secure: true
+//});
 
 export const PROFILE_TYPES = {
     LOADING: 'LOADING_PROFILE',
@@ -48,13 +57,15 @@ export const getProfileUsers =
 export const updateProfileUser =
     ({ userData, avatar, auth }) =>
     async (dispatch) => {
-        if (!userData.fullname)
+        console.log(!userData.fullName);
+        if (!userData.fullName) {
             return dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: 'Please add your full name.' }
             });
+        }
 
-        if (userData.fullname.length > 25)
+        if (userData.fullName.length > 25)
             return dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: 'Your full name too long.' }
@@ -70,7 +81,10 @@ export const updateProfileUser =
             let media;
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
 
+            //if (avatar) media = cloudinary.v2.uploader.upload(avatar);
+            console.log(avatar);
             if (avatar) media = await imageUpload([avatar]);
+            console.log(media);
 
             const res = await patchDataAPI(
                 'user',

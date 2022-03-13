@@ -1,21 +1,52 @@
 .auth_page {
+    background-image: url(../assets/light-front-page.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     min-height: 100vh;
-    background: #fdfdfd;
+    /*background: #fdfdfd;*/
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .auth_page form {
-    background: #fff;
+    /*background: #fff;*/
     max-width: 400px;
+    border-radius: 2rem;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 50px 25px;
+    backdrop-filter: blur(20px);
+}
+
+.auth_page label {
+    font-size: 1.25rem;
+}
+
+.auth_page h3 {
+    font-family: Canela_Bold;
+    font-size: 4rem;
+}
+
+.auth_page button {
+    font-size: 1.25rem;
+}
+
+.auth_page figure {
+    padding-top: 2rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.auth_page figure span {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .auth_page form .pass {
     position: relative;
+    /*margin-bottom: 2rem;*/
 }
 
 .auth_page form .pass small {

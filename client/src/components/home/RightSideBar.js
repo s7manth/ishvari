@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import UserCard from '../UserCard';
 import FollowBtn from '../FollowBtn';
-import LoadIcon from '../../images/loading-icon.svg';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 
 const RightSideBar = () => {
@@ -11,11 +10,11 @@ const RightSideBar = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className="mt-3">
+        <div className="mt-3 status">
             <UserCard user={auth.user} />
 
             <div className="d-flex justify-content-between align-items-center my-2">
-                <h5 className="text-danger">Suggestions for you</h5>
+                <h5>Suggestions for you</h5>
                 {!suggestions.loading && (
                     <i
                         className="fas fa-redo"
@@ -26,11 +25,7 @@ const RightSideBar = () => {
             </div>
 
             {suggestions.loading ? (
-                <img
-                    src={LoadIcon}
-                    alt="loading"
-                    className="d-block mx-auto my-4"
-                />
+                <></>
             ) : (
                 <div className="suggestions">
                     {suggestions.users.map((user) => (

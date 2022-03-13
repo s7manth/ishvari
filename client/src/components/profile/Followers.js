@@ -24,10 +24,12 @@ const Followers = ({ users, setShowFollowers }) => {
                         </UserCard>
                     ))}
                 </div>
-
-                <div className="close" onClick={() => setShowFollowers(false)}>
-                    &times;
-                </div>
+                <button
+                    className="btn btn-danger btn_close"
+                    onClick={() => setShowFollowers(false)}
+                >
+                    Close
+                </button>
             </div>
         </div>
     );

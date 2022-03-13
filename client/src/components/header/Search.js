@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import UserCard from '../UserCard';
-import LoadIcon from '../../images/loading-icon.svg';
 
 const Search = () => {
     const [search, setSearch] = useState('');
@@ -52,8 +51,7 @@ const Search = () => {
             />
 
             <div className="search_icon" style={{ opacity: search ? 0 : 0.3 }}>
-                <span className="material-icons">search</span>
-                <span>Enter to Search</span>
+                <span className="placeholder_search">Enter to Search</span>
             </div>
 
             <div
@@ -67,8 +65,6 @@ const Search = () => {
             <button type="submit" style={{ display: 'none' }}>
                 Search
             </button>
-
-            {load && <img className="loading" src={LoadIcon} alt="loading" />}
 
             <div className="users">
                 {search &&

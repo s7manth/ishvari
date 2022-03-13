@@ -14,6 +14,11 @@ code {
         monospace;
 }
 
+@font-face {
+    font-family: Canela_Bold;
+    src: url('../fonts/canela-bold.ttf');
+}
+
 #theme {
     display: none;
 }
@@ -34,6 +39,11 @@ code {
     margin: auto;
 }
 
+.menu li .icon_navbar {
+    padding: 0 0.5rem;
+    /*padding-left: 1rem;*/
+}
+
 img {
     object-fit: cover;
 }
@@ -50,8 +60,8 @@ img {
 /* -------- Avatar ---------- */
 @import url('./avatar.css');
 
-/* -------- Header ---------- */
-@import url('./header.css');
+/*[> -------- Header ---------- <]*/
+/*@import url('./header.css');*/
 
 /* -------- Profile ---------- */
 @import url('./profile.css');

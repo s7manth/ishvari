@@ -13,7 +13,6 @@ import {
     loadMoreMessages,
     deleteConversation
 } from '../../redux/actions/messageAction';
-import LoadIcon from '../../images/loading-icon.svg';
 
 const RightSide = () => {
     const { auth, message, theme, socket, peer } = useSelector(
@@ -163,28 +162,28 @@ const RightSide = () => {
 
     // Call
     const caller = ({ video }) => {
-        const { _id, avatar, username, fullname } = user;
+        const { _id, avatar, username, fullName } = user;
 
         const msg = {
             sender: auth.user._id,
             recipient: _id,
             avatar,
             username,
-            fullname,
+            fullName,
             video
         };
         dispatch({ type: GLOBALTYPES.CALL, payload: msg });
     };
 
     const callUser = ({ video }) => {
-        const { _id, avatar, username, fullname } = auth.user;
+        const { _id, avatar, username, fullName } = auth.user;
 
         const msg = {
             sender: _id,
             recipient: user._id,
             avatar,
             username,
-            fullname,
+            fullName,
             video
         };
 
@@ -265,11 +264,7 @@ const RightSide = () => {
                         </div>
                     ))}
 
-                    {loadMedia && (
-                        <div className="chat_row you_message">
-                            <img src={LoadIcon} alt="loading" />
-                        </div>
-                    )}
+                    {loadMedia && <div className="chat_row you_message"></div>}
                 </div>
             </div>
 

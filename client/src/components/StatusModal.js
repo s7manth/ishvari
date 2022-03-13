@@ -108,7 +108,8 @@ const StatusModal = () => {
             <form onSubmit={handleSubmit}>
                 <div className="status_header">
                     <h5 className="m-0">Create Post</h5>
-                    <span
+                    <button
+                        className="btn btn-danger"
                         onClick={() =>
                             dispatch({
                                 type: GLOBALTYPES.STATUS,
@@ -116,15 +117,15 @@ const StatusModal = () => {
                             })
                         }
                     >
-                        &times;
-                    </span>
+                        Close
+                    </button>
                 </div>
 
                 <div className="status_body">
                     <textarea
                         name="content"
                         value={content}
-                        placeholder={`${auth.user.username}, what are you thinking?`}
+                        placeholder={`${auth.user.fullName}, What are you thinking?`}
                         onChange={(e) => setContent(e.target.value)}
                         style={{
                             filter: theme ? 'invert(1)' : 'invert(0)',
