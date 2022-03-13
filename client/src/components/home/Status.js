@@ -17,7 +17,7 @@ const Status = () => {
                     dispatch({ type: GLOBALTYPES.STATUS, payload: true })
                 }
             >
-                {auth.user.username}, what are you thinking?
+                {auth.user.fullName}, What are you thinking?
             </button>
         </div>
     );

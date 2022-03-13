@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
+//import login as
 
 const Login = () => {
     const initialState = { email: '', password: '' };
@@ -31,7 +32,7 @@ const Login = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">Ishvari</h3>
+                <h3 className="text-center mb-4 login_heading">Ishvari</h3>
 
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
@@ -62,10 +63,6 @@ const Login = () => {
                             value={password}
                             name="password"
                         />
-
-                        <small onClick={() => setTypePass(!typePass)}>
-                            {typePass ? 'Hide' : 'Show'}
-                        </small>
                     </div>
                 </div>
 

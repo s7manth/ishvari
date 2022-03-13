@@ -9,7 +9,8 @@
     overflow: auto;
 }
 .status_modal form {
-    max-width: 450px;
+    max-width: 550px;
+    /*max-height: 550px;*/
     width: 100%;
     background: white;
     margin: 30px auto;
@@ -31,7 +32,7 @@
 }
 .status_body textarea {
     width: 100%;
-    min-height: 150px;
+    min-height: 350px;
     border: none;
     outline: none;
     resize: none;

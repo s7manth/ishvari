@@ -200,7 +200,7 @@ const CallModal = () => {
                 <div className="text-center" style={{ padding: '40px 0' }}>
                     <Avatar src={call.avatar} size="supper-avatar" />
                     <h4>{call.username}</h4>
-                    <h6>{call.fullname}</h6>
+                    <h6>{call.fullName}</h6>
 
                     {answer ? (
                         <div>

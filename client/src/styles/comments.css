@@ -39,6 +39,7 @@
 }
 
 .comment_card .comment_content .nav-item {
+    padding-left: 10px;
     cursor: pointer;
     opacity: 0;
 }

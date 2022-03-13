@@ -17,10 +17,10 @@ export const addMessage =
     async (dispatch) => {
         dispatch({ type: MESS_TYPES.ADD_MESSAGE, payload: msg });
 
-        const { _id, avatar, fullname, username } = auth.user;
+        const { _id, avatar, fullName, username } = auth.user;
         socket.emit('addMessage', {
             ...msg,
-            user: { _id, avatar, fullname, username }
+            user: { _id, avatar, fullName, username }
         });
 
         try {

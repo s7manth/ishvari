@@ -38,7 +38,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
 
                     <div className="info_content">
                         <div className="info_content_title">
-                            <h2>{user.username}</h2>
+                            <h2>{user.fullName}</h2>
                             {user._id === auth.user._id ? (
                                 <button
                                     className="btn btn-outline-info"
@@ -50,6 +50,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
                                 <FollowBtn user={user} />
                             )}
                         </div>
+                        <h5>{user.username}</h5>
 
                         <div className="follow_btn">
                             <span
@@ -67,7 +68,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
                         </div>
 
                         <h6>
-                            {user.fullname}{' '}
+                            {user.fullName}{' '}
                             <span className="text-danger">{user.mobile}</span>
                         </h6>
                         <p className="m-0">{user.address}</p>

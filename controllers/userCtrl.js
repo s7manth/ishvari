@@ -31,14 +31,14 @@ const userCtrl = {
         try {
             const {
                 avatar,
-                fullname,
+                fullName,
                 mobile,
                 address,
                 story,
                 website,
                 gender
             } = req.body;
-            if (!fullname)
+            if (!fullName)
                 return res
                     .status(400)
                     .json({ msg: 'Please add your full name.' });
@@ -47,7 +47,7 @@ const userCtrl = {
                 { _id: req.user._id },
                 {
                     avatar,
-                    fullname,
+                    fullName,
                     mobile,
                     address,
                     story,

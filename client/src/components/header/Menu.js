@@ -30,42 +30,12 @@ const Menu = () => {
                         key={index}
                     >
                         <Link className="nav-link" to={link.path}>
-                            <span className="material-icons">{link.icon}</span>
+                            <span className="material-icons-round">
+                                {link.icon}
+                            </span>
                         </Link>
                     </li>
                 ))}
-
-                <li className="nav-item dropdown" style={{ opacity: 1 }}>
-                    <span
-                        className="nav-link position-relative"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                    >
-                        <span
-                            className="material-icons"
-                            style={{
-                                color: notify.data.length > 0 ? 'crimson' : ''
-                            }}
-                        >
-                            favorite
-                        </span>
-
-                        <span className="notify_length">
-                            {notify.data.length}
-                        </span>
-                    </span>
-
-                    <div
-                        className="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                        style={{ transform: 'translateX(75px)' }}
-                    >
-                        <NotifyModal />
-                    </div>
-                </li>
 
                 <li className="nav-item dropdown" style={{ opacity: 1 }}>
                     <span
