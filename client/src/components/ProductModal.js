@@ -107,7 +107,7 @@ const StatusModal = () => {
         <div className="status_modal">
             <form onSubmit={handleSubmit}>
                 <div className="status_header">
-                    <h5 className="m-0">Create Product</h5>
+                    <h5 className="m-0">Create Post</h5>
                     <button
                         className="btn btn-danger"
                         onClick={() =>
@@ -125,7 +125,7 @@ const StatusModal = () => {
                     <textarea
                         name="content"
                         value={content}
-                        placeholder={`${auth.user.fullName}, What is your product?`}
+                        placeholder={`${auth.user.fullName}, What are you thinking?`}
                         onChange={(e) => setContent(e.target.value)}
                         style={{
                             filter: theme ? 'invert(1)' : 'invert(0)',
@@ -226,7 +226,7 @@ const StatusModal = () => {
 
                 <div className="status_footer">
                     <button className="btn btn-secondary w-100" type="submit">
-                        Post Product
+                        Post
                     </button>
                 </div>
             </form>

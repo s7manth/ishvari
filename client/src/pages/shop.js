@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 let scroll = 0;
 
-const Home = () => {
+const Shop = () => {
     const { homePosts } = useSelector((state) => state);
 
     window.addEventListener('scroll', () => {
@@ -27,19 +27,15 @@ const Home = () => {
     return (
         <div className="home row mx-0">
             <div className="col-md-8">
-                {/* <Status /> */}
+                <Status />
                 {homePosts.result === 0 && homePosts.posts.length === 0 ? (
-                    <h2 className="text-center">No Post</h2>
+                    <h2 className="text-center">No Products</h2>
                 ) : (
                     <Posts />
                 )}
-            </div>
-
-            <div className="col-md-4">
-                <RightSideBar />
             </div>
         </div>
     );
 };
 
-export default Home;
+export default Shop;
