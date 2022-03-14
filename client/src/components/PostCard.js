@@ -15,12 +15,7 @@ const PostCard = ({ post, theme }) => {
 
             <Comments post={post} />
             {post.isProduct && (
-                <button
-                    className="btn btn-outline-success"
-                    onClick={() => setOnEdit(true)}
-                >
-                    Buy Now
-                </button>
+                <button className="btn btn-outline-success">Buy Now</button>
             )}
 
             <InputComment post={post} />

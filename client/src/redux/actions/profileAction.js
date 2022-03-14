@@ -3,7 +3,7 @@ import { GLOBALTYPES, DeleteData } from './globalTypes';
 import { getDataAPI, patchDataAPI } from '../../utils/fetchData';
 import { imageUpload } from '../../utils/imageUpload';
 import { createNotify, removeNotify } from '../actions/notifyAction';
-const cloudinary = require('cloudinary');
+// const cloudinary = require('cloudinary');
 
 //cloudinary.config({
 //cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
