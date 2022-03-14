@@ -3,7 +3,7 @@
     background: white;
     box-shadow: 0 0 5px #ddd;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     border: 1px solid rgb(0, 0, 0, 0.125);
 }
 .status .statusBtn {
@@ -18,7 +18,8 @@
 }
 
 .user_fullname {
-    font-size: 1.5rem;
+    padding-left: 10px;
+    font-size: 1.25rem;
 }
 .status .statusBtn:hover {
     background: #ddd;
@@ -27,6 +28,8 @@
 /* ------------Posts ------ */
 .posts .card {
     box-shadow: 0 0 4px #ddd;
+    background-color: #e8ecf2;
+    border-radius: 2.25rem;
 }
 /* --------- Post Card Header --------- */
 .posts .card_header {
@@ -38,6 +41,10 @@
 }
 .posts .card_header .card_name {
     transform: translateY(3px);
+}
+
+.card_name {
+    padding-left: 10px;
 }
 .posts .card_header .dropdown-menu {
     position: absolute;

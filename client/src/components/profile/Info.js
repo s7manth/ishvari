@@ -68,7 +68,8 @@ const Info = ({ id, auth, profile, dispatch }) => {
                         </div>
 
                         <h6>
-                            {user.fullName}{' '}
+                            {user.fullName}
+                            {'  '}
                             <span className="text-danger">{user.mobile}</span>
                         </h6>
                         <p className="m-0">{user.address}</p>

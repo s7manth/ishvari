@@ -197,29 +197,19 @@ const StatusModal = () => {
 
                     <div className="input_images">
                         {stream ? (
-                            <i
-                                className="fas fa-camera"
-                                onClick={handleCapture}
-                            />
+                            <></>
                         ) : (
-                            <>
-                                <i
-                                    className="fas fa-camera"
-                                    onClick={handleStream}
+                            <div className="file_upload">
+                                <i className="fas fa-image" />
+                                <input
+                                    type="file"
+                                    name="file"
+                                    id="file"
+                                    multiple
+                                    accept="image/*,video/*"
+                                    onChange={handleChangeImages}
                                 />
-
-                                <div className="file_upload">
-                                    <i className="fas fa-image" />
-                                    <input
-                                        type="file"
-                                        name="file"
-                                        id="file"
-                                        multiple
-                                        accept="image/*,video/*"
-                                        onChange={handleChangeImages}
-                                    />
-                                </div>
-                            </>
+                            </div>
                         )}
                     </div>
                 </div>

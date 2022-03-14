@@ -2,19 +2,25 @@
     width: 100%;
     min-height: 70px;
     position: sticky;
+    margin-top: 23px;
     top: 0;
     left: 0;
     z-index: 2;
     /*box-shadow: 0 0 10px #ddd;*/
     background: #f8f9fa;
     border: 1px solid rgb(0, 0, 0, 0.125);
+    border-radius: 30px;
 }
+
 .header .navbar {
     width: 100%;
+    background-color: #7c90b3;
     height: 100%;
+    border-radius: 30px;
 }
 .header .logo h1 {
     font-size: 3rem;
+    color: white;
     font-family: Canela_Bold;
 }
 
@@ -26,6 +32,7 @@
     opacity: 1;
 }
 .header .menu .material-icons-round {
+    color: white;
     font-size: 30px;
 }
 .header .menu .dropdown-menu {
@@ -60,8 +67,8 @@
     outline: none;
     padding: 5px;
     text-indent: 5px;
-    border-radius: 3px;
-    font-size: 1.25rem;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
 .placeholder_search {
@@ -82,6 +89,7 @@
     pointer-events: none;
 }
 .header .search_form .search_icon .material-icons-round {
+    color: white;
     font-size: 14px;
     transform: translateY(3px);
 }

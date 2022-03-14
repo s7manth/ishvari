@@ -9,8 +9,7 @@ import NotifyModal from '../NotifyModal';
 const Menu = () => {
     const navLinks = [
         { label: 'Home', icon: 'home', path: '/' },
-        { label: 'Message', icon: 'near_me', path: '/message' },
-        { label: 'Discover', icon: 'explore', path: '/discover' }
+        { label: 'Message', icon: 'near_me', path: '/message' }
     ];
 
     const { auth, theme, notify } = useSelector((state) => state);
@@ -36,7 +35,6 @@ const Menu = () => {
                         </Link>
                     </li>
                 ))}
-
                 <li className="nav-item dropdown" style={{ opacity: 1 }}>
                     <span
                         className="nav-link dropdown-toggle"
