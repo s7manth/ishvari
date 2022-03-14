@@ -28,7 +28,7 @@ const Profile = () => {
         <div className="profile">
             <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-            {auth.user._id === id && (
+            {
                 <div className="profile_tab">
                     <button
                         className={postTab ? 'active' : ''}
@@ -39,15 +39,17 @@ const Profile = () => {
                     >
                         Posts
                     </button>
-                    <button
-                        className={saveTab ? 'active' : ''}
-                        onClick={() => {
-                            setPostTab(false);
-                            setSaveTab(true);
-                        }}
-                    >
-                        Saved
-                    </button>
+                    {auth.user._id === id && (
+                        <button
+                            className={saveTab ? 'active' : ''}
+                            onClick={() => {
+                                setPostTab(false);
+                                setSaveTab(true);
+                            }}
+                        >
+                            Saved
+                        </button>
+                    )}
                     <button
                         className={!(postTab || saveTab) ? 'active' : ''}
                         onClick={() => {
@@ -58,7 +60,7 @@ const Profile = () => {
                         Shop
                     </button>
                 </div>
-            )}
+            }
 
             {profile.loading ? (
                 <></>
