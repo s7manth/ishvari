@@ -12,6 +12,8 @@ const StatusModal = () => {
     const [content, setContent] = useState('');
     const [images, setImages] = useState([]);
 
+    const [isProduct, setIsProduct] = useState(false);
+
     const [stream, setStream] = useState(false);
     const videoRef = useRef();
     const refCanvas = useRef();
@@ -87,7 +89,7 @@ const StatusModal = () => {
         if (status.onEdit) {
             dispatch(updatePost({ content, images, auth, status }));
         } else {
-            dispatch(createPost({ content, images, auth, socket }));
+            dispatch(createPost({ content, images, auth, socket, isProduct }));
         }
 
         setContent('');
@@ -133,7 +135,6 @@ const StatusModal = () => {
                             background: theme ? 'rgba(0,0,0,.03)' : ''
                         }}
                     />
-
                     <div className="d-flex">
                         <div className="flex-fill"></div>
                         <Icons
@@ -142,7 +143,21 @@ const StatusModal = () => {
                             theme={theme}
                         />
                     </div>
-
+                    <div className="form-check">
+                        <input
+                            className="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            onChange={(e) => setIsProduct(e.target.checked)}
+                        />
+                        <label
+                            className="form-check-label"
+                            htmlFor="flexCheckChecked"
+                        >
+                            Is it a product?
+                        </label>
+                    </div>{' '}
                     <div className="show_images">
                         {images.map((img, index) => (
                             <div key={index} id="file_img">
@@ -173,7 +188,6 @@ const StatusModal = () => {
                             </div>
                         ))}
                     </div>
-
                     {stream && (
                         <div className="stream position-relative">
                             <video
@@ -194,7 +208,6 @@ const StatusModal = () => {
                             />
                         </div>
                     )}
-
                     <div className="input_images">
                         {stream ? (
                             <></>

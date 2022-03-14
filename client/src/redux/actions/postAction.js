@@ -18,7 +18,7 @@ export const POST_TYPES = {
 };
 
 export const createPost =
-    ({ content, images, auth, socket }) =>
+    ({ content, images, auth, socket, isProduct }) =>
     async (dispatch) => {
         let media = [];
         try {
@@ -27,7 +27,7 @@ export const createPost =
 
             const res = await postDataAPI(
                 'posts',
-                { content, images: media },
+                { content, images: media, isProduct },
                 auth.token
             );
 
