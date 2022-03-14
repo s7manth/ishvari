@@ -14,6 +14,15 @@ const PostCard = ({ post, theme }) => {
             <CardFooter post={post} />
 
             <Comments post={post} />
+            {post.isProduct && (
+                <button
+                    className="btn btn-outline-success"
+                    onClick={() => setOnEdit(true)}
+                >
+                    Buy Now
+                </button>
+            )}
+
             <InputComment post={post} />
         </div>
     );
