@@ -4,7 +4,7 @@ import LoadMoreBtn from '../LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { PROFILE_TYPES } from '../../redux/actions/profileAction';
 
-const Posts = ({ auth, id, dispatch, profile }) => {
+const Shop = ({ auth, id, dispatch, profile }) => {
     const [posts, setPosts] = useState([]);
     const [result, setResult] = useState(9);
     const [page, setPage] = useState(0);
@@ -16,6 +16,7 @@ const Posts = ({ auth, id, dispatch, profile }) => {
                 setPosts(data.posts);
                 setResult(data.result);
                 setPage(data.page);
+                console.log(data.posts);
             }
         });
     }, [profile.posts, id]);
@@ -31,9 +32,11 @@ const Posts = ({ auth, id, dispatch, profile }) => {
         setLoad(false);
     };
 
+    //profile.posts.forEach((x) => console.log(x.posts));
+
     return (
         <div>
-            <PostThumb posts={posts} result={result} isPost={true} />
+            <PostThumb posts={posts} result={result} isPost={false} />
 
             <LoadMoreBtn
                 result={result}
@@ -45,4 +48,4 @@ const Posts = ({ auth, id, dispatch, profile }) => {
     );
 };
 
-export default Posts;
+export default Shop;

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Info from '../../components/profile/Info';
 import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
+import Shop from '../../components/profile/Shop';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { getProfileUsers } from '../../redux/actions/profileAction';
@@ -14,6 +15,8 @@ const Profile = () => {
 
     const { id } = useParams();
     const [saveTab, setSaveTab] = useState(false);
+    const [postTab, setPostTab] = useState(true);
+    //const [postTab, setPostTab] = useState(false);
 
     useEffect(() => {
         if (profile.ids.every((item) => item !== id)) {
@@ -28,16 +31,31 @@ const Profile = () => {
             {auth.user._id === id && (
                 <div className="profile_tab">
                     <button
-                        className={saveTab ? '' : 'active'}
-                        onClick={() => setSaveTab(false)}
+                        className={postTab ? 'active' : ''}
+                        onClick={() => {
+                            setSaveTab(false);
+                            setPostTab(true);
+                        }}
                     >
                         Posts
                     </button>
                     <button
                         className={saveTab ? 'active' : ''}
-                        onClick={() => setSaveTab(true)}
+                        onClick={() => {
+                            setPostTab(false);
+                            setSaveTab(true);
+                        }}
                     >
                         Saved
+                    </button>
+                    <button
+                        className={!(postTab || saveTab) ? 'active' : ''}
+                        onClick={() => {
+                            setPostTab(false);
+                            setSaveTab(false);
+                        }}
+                    >
+                        Shop
                     </button>
                 </div>
             )}
@@ -48,8 +66,15 @@ const Profile = () => {
                 <>
                     {saveTab ? (
                         <Saved auth={auth} dispatch={dispatch} />
-                    ) : (
+                    ) : postTab ? (
                         <Posts
+                            auth={auth}
+                            profile={profile}
+                            dispatch={dispatch}
+                            id={id}
+                        />
+                    ) : (
+                        <Shop
                             auth={auth}
                             profile={profile}
                             dispatch={dispatch}
