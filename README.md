@@ -26,3 +26,8 @@ One important thing that we learnt was that women globally need a voice to expre
 ## What's next for Ishvari
 Ishvari will focus on perfecting the marketplace segment of things to cater for better monetization features and also work on community building aspect. An example of this would be to have a private members only access to certain content posted on the website. In addition, Ishvari plans on expanding to other segments like creative spaces, health and wellness, hobby sharing categories and much more! This way, Ishvari will be able to boost women engagement and employment across all verticals. One important change that we want to bring is the setup of micro-financing services for women who want to raise money for their ventures and create a brand. Our platform will be key in providing credible data about the creator and accomplishments so that women become self-reliant, strong, and make wonders!
 
+## Contributors 
+- [Sourabh Raj Jaiswal](https://github.com/srj31)
+- [Neeladri Bhuiya](https://github.com/zawedcvg)
+- [Sumanth Yalamarty](https://github.com/s7manth)
+
