@@ -23,11 +23,11 @@ export const imageUpload = async (images) => {
             formData.append('file', item);
         }
 
-        formData.append('upload_preset', 'ohhvok6g');
+        formData.append('upload_preset', 'i0xb96lo');
         formData.append('cloud_name', 'notfound');
 
         const res = await fetch(
-            'https://api-eu.cloudinary.com/v1_1/notfound/upload',
+            'https://api.cloudinary.com/v1_1/notfound/image/upload',
             {
                 method: 'POST',
                 body: formData
