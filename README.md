@@ -31,3 +31,6 @@ Ishvari will focus on perfecting the marketplace segment of things to cater for 
 - [Neeladri Bhuiya](https://github.com/zawedcvg)
 - [Sumanth Yalamarty](https://github.com/s7manth)
 
+> Note : This repository contains the submission for Hack For Good 2022 hosted by DSC Student Developers' Group NUS.
+
+With love, Team Buffering...
