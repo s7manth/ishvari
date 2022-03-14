@@ -49,7 +49,7 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
 
             <Icons setContent={setContent} content={content} theme={theme} />
 
-            <button type="submit" className="postBtn">
+            <button type="submit" className="btn btn-primary">
                 Post
             </button>
         </form>

@@ -8,11 +8,16 @@
     outline: none;
     flex: 1;
     overflow: auto;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-indent: 10px;
+    padding: 5px;
 }
+
 .comment_input .postBtn {
     border: none;
     outline: none;
-    background: #f7f7f7;
+    background: #e8ecf9;
     color: blue;
     font-weight: 600;
 }
