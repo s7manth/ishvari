@@ -22,7 +22,7 @@ const Carousel = ({ images, id }) => {
             </ol>
 
             <div className="carousel-inner">
-                {/* {images.map((img, index) => (
+                {images.map((img, index) => (
                     <div
                         key={index}
                         className={`carousel-item ${isActive(index)}`}
@@ -48,7 +48,7 @@ const Carousel = ({ images, id }) => {
                             />
                         )}
                     </div>
-                ))} */}
+                ))}
             </div>
 
             {images.length > 1 && (
