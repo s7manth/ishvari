@@ -14,6 +14,10 @@ const PostCard = ({ post, theme }) => {
             <CardFooter post={post} />
 
             <Comments post={post} />
+            {post.isProduct && (
+                <button className="btn btn-outline-success">Buy Now</button>
+            )}
+
             <InputComment post={post} />
         </div>
     );
