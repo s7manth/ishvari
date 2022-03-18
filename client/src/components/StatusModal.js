@@ -10,6 +10,7 @@ const StatusModal = () => {
     const dispatch = useDispatch();
 
     const [content, setContent] = useState('');
+    const [url, setURL] = useState('');
     const [images, setImages] = useState([]);
 
     const [isProduct, setIsProduct] = useState(false);
@@ -89,7 +90,9 @@ const StatusModal = () => {
         if (status.onEdit) {
             dispatch(updatePost({ content, images, auth, status }));
         } else {
-            dispatch(createPost({ content, images, auth, socket, isProduct }));
+            dispatch(
+                createPost({ content, images, auth, socket, isProduct, url })
+            );
         }
 
         setContent('');
@@ -158,6 +161,16 @@ const StatusModal = () => {
                             Is it a product?
                         </label>
                     </div>{' '}
+                    {isProduct && (
+                        <div>
+                            <label className="url-label">Enter your URL</label>
+                            <input
+                                className="url-link"
+                                value={url}
+                                onChange={(e) => setURL(e.target.value)}
+                            />
+                        </div>
+                    )}
                     <div className="show_images">
                         {images.map((img, index) => (
                             <div key={index} id="file_img">

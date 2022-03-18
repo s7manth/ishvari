@@ -53,6 +53,14 @@ code {
     /*padding-left: 1rem;*/
 }
 
+.url-label {
+    margin-top: 0.5rem;
+}
+.url-link {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
 img {
     object-fit: cover;
 }

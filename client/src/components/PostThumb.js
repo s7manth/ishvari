@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const PostThumb = ({ posts, result, isPost }) => {
     const { theme } = useSelector((state) => state);
     const posts_filtered = posts.filter((x) => x.isProduct ^ isPost);
-    console.log(posts_filtered);
+    //console.log(posts_filtered);
 
     if (result === 0)
         return <h2 className="text-center text-danger">No Post</h2>;

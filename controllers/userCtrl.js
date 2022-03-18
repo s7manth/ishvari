@@ -4,7 +4,10 @@ const userCtrl = {
     searchUser: async (req, res) => {
         try {
             const users = await Users.find({
-                username: { $regex: req.query.username }
+                $or: [
+                    { username: { $regex: req.query.username } },
+                    { fullName: { $regex: req.query.username } }
+                ]
             })
                 .limit(10)
                 .select('fullName username avatar');

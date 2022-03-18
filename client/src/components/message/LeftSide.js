@@ -26,6 +26,8 @@ const LeftSide = () => {
         e.preventDefault();
         if (!search) return setSearchUsers([]);
 
+        //const search_lower = search.toLowerCase();
+
         try {
             const res = await getDataAPI(
                 `search?username=${search}`,

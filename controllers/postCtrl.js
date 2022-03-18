@@ -20,7 +20,7 @@ class APIfeatures {
 const postCtrl = {
     createPost: async (req, res) => {
         try {
-            const { content, images, isProduct } = req.body;
+            const { content, images, isProduct, url } = req.body;
 
             if (images.length === 0)
                 return res.status(400).json({ msg: 'Please add your photo.' });
@@ -29,7 +29,8 @@ const postCtrl = {
                 content,
                 images,
                 user: req.user._id,
-                isProduct
+                isProduct,
+                url
             });
             await newPost.save();
 
