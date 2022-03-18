@@ -6,7 +6,7 @@ const postSchema = new mongoose.Schema(
         isProduct: Boolean,
         url: {
             type: String,
-            default: 'www.google.com'
+            default: 'https://www.google.com/'
         },
         images: {
             type: Array,
