@@ -7,6 +7,7 @@ import Comments from './home/Comments';
 import InputComment from './home/InputComment';
 
 const PostCard = ({ post, theme }) => {
+    //console.log(post.url);
     return (
         <div className="card my-3">
             <CardHeader post={post} />
@@ -16,7 +17,12 @@ const PostCard = ({ post, theme }) => {
 
             <Comments post={post} />
             {post.isProduct && (
-                <button className="btn btn-outline-success">Buy Now</button>
+                <button
+                    className="btn btn-outline-success"
+                    onClick={(e) => window.open(post.url, '_blank')}
+                >
+                    Buy Now
+                </button>
             )}
 
             <InputComment post={post} />

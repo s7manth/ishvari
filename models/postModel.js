@@ -4,6 +4,10 @@ const postSchema = new mongoose.Schema(
     {
         content: String,
         isProduct: Boolean,
+        url: {
+            type: String,
+            default: 'www.google.com'
+        },
         images: {
             type: Array,
             required: true
